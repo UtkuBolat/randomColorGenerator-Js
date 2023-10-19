@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Generator</title>
+</head>
+<body>
+    <h1></h1>
+    <button style="position: absolute; top: 50%; left: 50%;padding: 20px; transform: translate(-50%, -50%); border-radius: 15px;"">Click</button>
+    <script>
+        const button =  document.querySelector("button")
+const h1 = document.querySelector('h1');
+
+
+button.addEventListener("click", () => {
+    let x = Math.floor(Math.random() * 256)
+    let y = Math.floor(Math.random() * 256)
+    let z = Math.floor(Math.random() * 256)
+    let bgColor = `rgb(${x}, ${y}, ${z})`
+    button.innerText = bgColor;
+    document.body.style.backgroundColor = bgColor;
+})
+    </script>
+</body>
+</html>
